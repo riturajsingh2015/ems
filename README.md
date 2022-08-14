@@ -10,8 +10,11 @@ Website : <https://www.javaguides.net/2018/10/free-open-source-projects-using-sp
 Spinning a Postgres SQL container on Docker
 
 1. Pull the docker image
+
 ```bash
-docker pull postgres:alpine```
+docker pull postgres:alpine
+```
+
 
 2. Spin a container with the following attributes
 
@@ -21,13 +24,17 @@ docker pull postgres:alpine```
 - password : ems_pass
 
 ```bash
-docker run -d --name postgres_container -e POSTGRES_DB=ems_db -e POSTGRES_USER=ems_user -e POSTGRES_PASSWORD=ems_pass -p 5432:5432 postgres:alpine```
+docker run -d --name postgres_container -e POSTGRES_DB=ems_db -e POSTGRES_USER=ems_user -e POSTGRES_PASSWORD=ems_pass -p 5432:5432 postgres:alpine
+```
 
 3. Log into the container
 ```bash
-docker exec -it postgres_container bash```
+docker exec -it postgres_container bash
+```
+
 4. Log into as ems_user with ems_db as database
 ```bash
-psql -U ems_user -d ems_db```
+psql -U ems_user -d ems_db
+```
 
 If login with \l you would see ems_user as the main user and even we have a database with the name : ems_user
