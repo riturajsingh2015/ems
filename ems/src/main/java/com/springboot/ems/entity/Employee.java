@@ -1,4 +1,4 @@
-package com.springboot.ems;
+package com.springboot.ems.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

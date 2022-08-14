@@ -1,6 +1,8 @@
-package com.springboot.ems;
+package com.springboot.ems.service;
 
 import java.util.List;
+
+import com.springboot.ems.entity.Employee;
 
 public interface EmployeeService {
     Employee saveEmployee(Employee employee);
