@@ -12,4 +12,9 @@ public class HelloWorldController {
     public String helloWorld(){
         return "Hello World!";
     }
+
+    @GetMapping("/hello-world-app")
+    public String helloWorldApp(){
+        return "Hello World App!";
+    }
 }
