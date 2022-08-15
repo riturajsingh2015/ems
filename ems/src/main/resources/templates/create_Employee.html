@@ -11,9 +11,13 @@
 <body>
 
     <div class = "container">
-		<div class = "row">
+		<div class = "row p-4">
+			<h1 class = "text-uppercase text-center display-4"> Employees Management System</h1>
+		</div>
+
+		<div class = "row p-3">
 			<div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
-				<h1 class = "text-center"> Create New Employee </h1>
+				<p class = "text-uppercase text-center fs-5"> Create New Employee </p>
 				<div class = "card-body">
 
                     <!-- This form works on the employee object being used as the model.
@@ -56,8 +60,14 @@
 							/>
 						</div>
 						
-						<div class = "box-footer">
-							<button type="submit" class = "btn btn-primary">
+						<div class = "box-footer mt-2">
+							<a th:href = "@{/employees}"
+						 class = "btn btn-sm btn-outline-danger"
+						 style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+						 Back</a>
+
+							<button type="submit" class = "btn btn-outline-primary btn-sm float-end"
+							style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
 								Submit
 							</button>
 						</div>

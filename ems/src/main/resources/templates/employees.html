@@ -11,36 +11,45 @@
 <body>
 
     <div class="container">
-		<div class = "row">
-			<h1> List of Employees</h1>
+		<div class = "row p-4">
+			<h1 class = "text-uppercase text-center display-4"> Employees Management System</h1>
 		</div>
 
         <div class = "row">
 			<div class = "col-lg-3">
-				<a th:href = "@{/employees/new}" class = "btn btn-primary btn-sm mb-3"> Add Employee</a>
+				<a th:href = "@{/employees/new}" 
+				class = "btn btn-outline-primary btn-sm mb-3"
+				style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"> 
+				Add Employee</a>
 			</div>
 		</div>
 
-        <table class = "table table-striped table-bordered">
-			<thead class = "table-dark">
+        <table th:if="${ not#lists.isEmpty(employees)}"  class = "table table-hover table-sm">
+			<caption>List of employees</caption>
+			<thead class = "table-light">
 				<tr>
 					<th> First Name</th>
 					<th> Last Name</th>
 					<th> Email </th>
 					<th> Action </th>
+					
 				</tr>
 			</thead>
             <tbody>
 				<tr th:each = "employee: ${employees}">
-					<td th:text = "${employee.firstName}"></td>
-					<td th:text = "${employee.lastName}"></td>
-					<td th:text = "${employee.email}"></td>
+					<td class = "fs-6" th:text = "${employee.firstName}"></td>
+					<td class = "fs-6" th:text = "${employee.lastName}"></td>
+					<td class = "fs-6" th:text = "${employee.email}"></td>
                     <td>
 						<a th:href = "@{/employees/edit/{id}(id=${employee.id})}" 
-						 class = "btn btn-primary">Update</a>
+						 class = "btn btn-sm btn-outline-secondary"
+						 style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+						 Update</a>
 						
 						<a th:href = "@{/employees/{id}(id=${employee.id})}"
-						 class = "btn btn-danger">Delete</a>
+						 class = "btn btn-sm btn-outline-danger"
+						 style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+						 Delete</a>
 						 
 					</td>
                 </tr>
