@@ -1,11 +1,9 @@
 # Employees Management System 
 
-Employees Management System
+This is a simple employee management application manifesting CRUD functionalities made using SpringBoot(Backend) and Thymeleaf.
+The application uses PostgresSQL as a database which runs on top of a docker container
 
-Resources
-Website : <https://www.javaguides.net/2018/10/free-open-source-projects-using-spring-boot.html>
-
-'Please note that you don't have PostgreSQL already installed locally on your machine'
+`Please note that you don't have PostgreSQL already installed locally on your machine`
 
 Spinning a Postgres SQL container on Docker
 
